@@ -1,14 +1,18 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Text, GridItem } from "@chakra-ui/react";
 
 const PortfolioSection = () => {
   return (
-    <Grid templateColumns='repeat(5, 1fr)' gap={6}>
-      <GridItem w='100%' h='10' bg='orange' />
-      <GridItem w='100%' h='10' bg='blue.500' />
-      <GridItem w='100%' h='10' bg='blue.500' />
-      <GridItem w='100%' h='10' bg='blue.500' />
-      <GridItem w='100%' h='10' bg='blue.500' />
-    </Grid>
+    <>
+      <Box flex='1'>
+        <Text fontSize='2xl' as='b'>
+          Featured Work
+        </Text>
+        <br />
+      </Box>
+      <Box flex='1' p='6' mt={"24px"}>
+        {/* <Image src={img} alt='services' width={500} height={500} /> */}
+      </Box>
+    </>
   );
 };
 

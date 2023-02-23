@@ -12,6 +12,9 @@ import Image from "next/image";
 
 // import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import img from "../public/images/img.png";
+import { Footer } from "../components/Footer";
+import SocialContact from "../components/SocialContacts";
+import PortfolioSection from "../components/Portfolio";
 
 const Index = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
@@ -30,7 +33,8 @@ const Index = () => {
       <Container width={"70%"} mt={"60px"}>
         <Flex
           alignItems='center'
-          mt={5}
+          mt={"150px"}
+          mb={"150px"}
           width={"100%"}
           direction={isLargerThan768 ? "row" : "column-reverse"}
         >
@@ -72,6 +76,10 @@ const Index = () => {
             <Image src={img} alt='services' width={500} height={500} />
           </Box>
         </Flex>
+        <PortfolioSection />
+        <Footer>
+          <SocialContact />
+        </Footer>
       </Container>
 
       {/* <DarkModeSwitch /> */}

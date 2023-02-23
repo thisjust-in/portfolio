@@ -23,7 +23,7 @@ export const NavBar = () => {
   const mobileNav = useColorModeValue("gray.200", "gray.600");
   const [navItems, setNavItems] = useState([
     { label: "Home", path: "/" },
-    { label: "Contact", path: "/contact" },
+    // { label: "Contact", path: "/contact" },
   ]);
 
   return (
@@ -42,14 +42,14 @@ export const NavBar = () => {
           ))}
         </Flex>
       </Box>
-      <IconButton
+      {/* <IconButton
         size='md'
         icon={<HamburgerIcon />}
         aria-label='Open Menu'
         display={{ md: "none" }}
         onClick={onOpen}
         bg={mobileNav}
-      />
+      /> */}
       <Drawer placement='right' onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
